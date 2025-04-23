@@ -1,0 +1,20 @@
+unmanaged implementation in class zcl_i_rpp_sales unique;
+strict ( 2 );
+
+define behavior for ZI_RPP_SALES alias Sales
+lock master
+authorization master ( instance )
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) Orderid;
+
+  mapping for ZTRPP_SALES_UN control ZSRPP_SALES_UN
+  {
+    Orderid = orderid;
+    Customer = customer;
+    vendor = vendor;
+    Company = company;
+  }
+}

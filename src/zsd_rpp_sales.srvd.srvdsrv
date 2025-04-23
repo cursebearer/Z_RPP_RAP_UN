@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition SALES'
+define service ZSD_RPP_SALES {
+  expose ZC_RPP_SALES as Sales;
+}
